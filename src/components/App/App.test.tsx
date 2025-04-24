@@ -1,5 +1,5 @@
 import React from 'react';
-import { MemoryRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { AppRootProps, PluginType } from '@grafana/data';
 import { render, screen } from '@testing-library/react';
 import App from './App';
@@ -27,11 +27,11 @@ describe('Components/App', () => {
 
   test('renders without an error"', async () => {
     render(
-      <MemoryRouter>
+      <BrowserRouter>
         <App {...props} />
-      </MemoryRouter>
+      </BrowserRouter>
     );
 
-    expect(await screen.findByText(/this is page one./i)).toBeInTheDocument();
+    await expect(await screen.findByText(/this is page one./i)).toBeInTheDocument();
   });
 });
