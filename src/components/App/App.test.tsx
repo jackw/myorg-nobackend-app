@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, MemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import { AppRootProps, PluginType } from '@grafana/data';
 import { render, screen } from '@testing-library/react';
 import App from './App';
